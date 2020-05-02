@@ -15,6 +15,18 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  var names = document.createElement("h1");
+  var jobs = document.createElement("h2");
+
+  arrayOfPeople.forEach(function (person) {
+    names.innerHTML += person.name + " ";
+    jobs.innerHTML += person.job + " ";
+
+    content.appendChild(names);
+    content.appendChild(jobs);
+
+  })
+
 }
 
 /**
@@ -26,6 +38,15 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  var contents = document.querySelector("#content");
+  var ul = document.createElement("ul");
+  contents.appendChild(ul);
+  shopping.forEach(function (item) {
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerHTML += item;
+  })
+
 }
 
 /**
@@ -59,6 +80,24 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let con = document.querySelector("#content");
+
+
+
+  let ul = document.createElement("ul");
+  con.appendChild(ul);
+  var booksParagraph = books.forEach(function (book) {
+    let lis = document.createElement("li");
+
+    let para = document.createElement("p");
+    para.innerHTML += book.author + ": " + book.title + " ";
+    lis.appendChild(para);
+    ul.appendChild(lis);
+
+
+  });
+
+
 }
 
 //
